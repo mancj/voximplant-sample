@@ -17,7 +17,7 @@ import static com.voximplant.demos.audiocall.utils.Constants.USERNAME;
 
 public class LoginPresenter implements LoginContract.Presenter, IClientManagerListener {
 
-    private static final String POSTFIX = ".voximplant.com";
+    private static final String POSTFIX = "ondoctestapp.adimin.n4.voximplant.com";
 
     private final WeakReference<LoginContract.View> mView;
     private VoxClientManager mClientManager = Shared.getInstance().getClientManager();
@@ -51,7 +51,7 @@ public class LoginPresenter implements LoginContract.Presenter, IClientManagerLi
             return;
         }
         if (!user.contains(POSTFIX)) {
-            user = user + POSTFIX;
+            user = user + "@" + POSTFIX;
         }
         view.showProgress(true);
         mClientManager.login(user, password);

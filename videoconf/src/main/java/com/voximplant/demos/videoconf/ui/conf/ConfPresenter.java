@@ -116,7 +116,7 @@ public class ConfPresenter implements ConfContract.Presenter, ICallListener, IEn
 
             @Override
             public void onFailure(CallException e) {
-
+                e.printStackTrace();
             }
         });
     }

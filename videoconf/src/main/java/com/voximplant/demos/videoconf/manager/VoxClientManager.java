@@ -46,10 +46,11 @@ public class VoxClientManager implements IClientSessionListener, IClientLoginLis
 
     public void loginUser(String meetingId, String username) {
         mDisplayName = username;
-        mNetworkManager.requestLoginCredentials(meetingId, username, new NetworkManager.ICredentialsRequestResult() {
+        login(username + VOX_ACCOUNT, "1111111111");
+        /*mNetworkManager.requestLoginCredentials(meetingId, username, new NetworkManager.ICredentialsRequestResult() {
             @Override
             public void onSuccess(String login, String password) {
-                login(login + VOX_ACCOUNT, password);
+
             }
 
             @Override
@@ -59,7 +60,7 @@ public class VoxClientManager implements IClientSessionListener, IClientLoginLis
                     mListener.onConnectionClosed();
                 }
             }
-        });
+        });*/
     }
 
     public void disconnect() {
@@ -70,8 +71,8 @@ public class VoxClientManager implements IClientSessionListener, IClientLoginLis
     }
 
     private void login(String username, String password) {
-        mUsername = username;
-        mPassword = password;
+        mUsername = username + VOX_ACCOUNT;
+        mPassword = "1111111111";
         if (mClient != null) {
             if (mClient.getClientState() == ClientState.DISCONNECTED) {
                 try {

@@ -40,14 +40,15 @@
 
         <EditText
             android:id="@+id/call_to"
-            android:fontFamily="@font/roboto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
             android:hint="@string/prompt_call_to"
             android:importantForAutofill="no"
             android:inputType="text"
             android:maxLines="1"
             android:singleLine="true"
+            android:text="user1@ondoctestapp.adimin.n4.voximplant.com"
             android:textColor="@color/colorButton" />
 
     </com.google.android.material.textfield.TextInputLayout>

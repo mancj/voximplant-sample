@@ -64,7 +64,7 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
         Button loginWithTokenButton = findViewById(R.id.email_sign_in_key_button);
         loginWithTokenButton.setOnClickListener(view -> {
             hideKeyboard(view);
-            mLoginPresenter.loginWithAccessToken(mLoginView.getText().toString() + ".voximplant.com");
+            mLoginPresenter.loginWithAccessToken(mLoginView.getText().toString() + ".ondoctestapp.adimin.n4.voximplant.com");
         });
 
         mLoginPresenter = new LoginPresenter(this);

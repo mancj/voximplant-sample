@@ -38,6 +38,7 @@
             android:autofillHints=""
             android:hint="@string/room_hint"
             android:inputType="number"
+            android:text="333"
             android:textColor="@color/colorWhite"
             android:textColorHint="@color/colorWhite" />
 
@@ -62,6 +63,7 @@
             android:autofillHints=""
             android:hint="@string/name_hint"
             android:inputType="text"
+            android:text="user"
             android:textColor="@color/colorWhite"
             android:textColorHint="@color/colorWhite" />
 

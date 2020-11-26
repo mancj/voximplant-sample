@@ -237,7 +237,7 @@ public class VoxClientManager implements IClientSessionListener, IClientLoginLis
 
     @Override
     public void onOneTimeKeyGenerated(String key) {
-        String hash = MD5.get(key + "|" + MD5.get(mUsername.substring(0, mUsername.indexOf("@")) + ":voximplant.com:" + mPassword));
+        String hash = MD5.get(key + "|" + MD5.get(mUsername.substring(0, mUsername.indexOf("@")) + ":ondoctestapp.adimin.n4.voximplant.com:" + mPassword));
         mClient.loginWithOneTimeKey(mUsername, hash);
     }
 

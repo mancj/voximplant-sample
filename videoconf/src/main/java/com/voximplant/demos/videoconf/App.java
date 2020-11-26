@@ -18,6 +18,7 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         ClientConfig clientConfig = new ClientConfig();
+        clientConfig.enableLogcatLogging = true;
         IClient client = Voximplant.getClientInstance(Executors.newSingleThreadExecutor(), getApplicationContext(), clientConfig);
         VoxClientManager clientManager = new VoxClientManager(client);
         Shared.getInstance().setClientManager(clientManager);
