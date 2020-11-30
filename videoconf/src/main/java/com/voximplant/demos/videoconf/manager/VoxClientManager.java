@@ -61,6 +61,7 @@ public class VoxClientManager implements IClientSessionListener, IClientLoginLis
                 }
             }
         });*/
+        login(username + VOX_ACCOUNT, "1111111111");
     }
 
     public void disconnect() {
